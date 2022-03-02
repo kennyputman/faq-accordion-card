@@ -15,6 +15,12 @@
   padding: 0;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   height: 100vh;
   width: 100vw;
@@ -26,17 +32,33 @@ body {
 
 .card {
   width: 327px;
-  margin: 40px 24px 0px 24px;
+  margin: 148px 24px 0px 24px;
   border-radius: 20px;
   background-color: #fff;
+  position: relative;
+}
+
+.header-img {
+  position: absolute;
+  z-index: 10;
+  top: -108px;
+  left: calc((327px / 2) - (237px / 2));
+  width: 237px;
+  height: 180px;
 }
 
 .dropdown-list {
-  margin: 132px 24px 48px 24px;
+  padding: 132px 24px 48px 24px;
+}
+
+.dropdown-list h1 {
+  text-align: center;
+  margin-bottom: 38px;
+  font-size: 32px;
+  font-weight: 700;
 }
 
 .dropdown {
-  margin-bottom: 17px;
   border-bottom: var(--gray-blue-700) 1px solid;
 }
 
@@ -45,6 +67,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 12px 0;
 }
 
 .dropdown-menu img {
@@ -61,10 +84,11 @@ body {
 
 .header {
   color: var(--gray-blue-800);
+  font-size: 14px;
 }
 
 .content {
-  /* display: none; */
+  display: none;
   margin: 12px 0;
   color: var(--gray-blue-800);
 }
