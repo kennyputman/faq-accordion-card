@@ -1,6 +1,6 @@
-const dropdowns = document.querySelectorAll(".dropdown-menu");
+const menus = document.querySelectorAll(".dropdown-menu");
 
-dropdowns.forEach((menu) => {
+menus.forEach((menu) => {
   menu.addEventListener("click", () => {
     const dropdown = menu.parentElement;
     const content = dropdown.lastElementChild;
