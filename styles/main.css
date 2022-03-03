@@ -31,13 +31,17 @@ body {
 
 .card {
   width: 327px;
-  margin: 148px 24px 0px 24px;
   border-radius: 20px;
   background-color: #fff;
   position: relative;
 }
 
-.header-img {
+.visible-overflow-container {
+  margin: 148px 24px 0px 24px;
+  position: relative;
+}
+
+.mobile-illustration {
   position: absolute;
   z-index: 10;
   top: -108px;
@@ -88,4 +92,76 @@ body {
   display: none;
   margin: 12px 0;
   color: var(--gray-blue-800);
+}
+
+.desktop-illustration {
+  display: none;
+}
+
+.box {
+  display: none;
+}
+
+.shadow {
+  display: none;
+}
+
+.mobile-shadow {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 1024px) {
+  .card {
+    min-height: 509px;
+    width: 920px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  .dropdown-list {
+    flex: 1;
+    padding: 65px 24px 48px 24px;
+  }
+
+  .mobile-illustration {
+    display: none;
+  }
+
+  .mobile-shadow {
+    display: none;
+  }
+
+  .desktop-illustration {
+    display: block;
+    position: relative;
+    flex: 1;
+  }
+
+  .illustration {
+    z-index: 15;
+    position: absolute;
+    left: -84px;
+    top: calc((509px / 2) - (359px / 2));
+  }
+
+  .box {
+    display: block;
+    position: absolute;
+    z-index: 20;
+    left: -92px;
+    top: 208px;
+  }
+
+  .shadow {
+    position: absolute;
+    display: block;
+    left: -575px;
+    top: -275px;
+  }
 }
