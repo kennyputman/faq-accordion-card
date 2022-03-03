@@ -1,9 +1,8 @@
-const buttons = document.querySelectorAll(".dropdown-btn");
+const dropdowns = document.querySelectorAll(".dropdown-menu");
 
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const dropdown = button.parentElement.parentElement;
-    const menu = button.parentElement;
+dropdowns.forEach((menu) => {
+  menu.addEventListener("click", () => {
+    const dropdown = menu.parentElement;
     const content = dropdown.lastElementChild;
     const header = menu.firstElementChild;
     const chevron = menu.lastElementChild;

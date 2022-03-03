@@ -22,8 +22,7 @@
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
   font-family: "Kumbh Sans", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -68,6 +67,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 12px 0;
+  cursor: pointer;
 }
 
 .dropdown-menu img {
@@ -75,16 +75,13 @@ body {
   width: auto;
 }
 
-.dropdown-menu button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-
 .header {
   color: var(--gray-blue-800);
   font-size: 14px;
+}
+
+.dropdown-menu:hover .header {
+  color: var(--soft-red);
 }
 
 .content {
